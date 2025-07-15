@@ -146,7 +146,7 @@ Edge_avoiding_AMR/
 
 
 License
-This project is licensed under the:
+This project is licensed under the: https://github.com/DasAdhikary122/Edge_avoiding_AMR/commit/b6773165302899ac43945684a98be4edae6eb431
 ## 🙌 Credits
 💡 Original project by https://github.com/Curious-Utkarsh
 
