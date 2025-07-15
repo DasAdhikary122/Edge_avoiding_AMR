@@ -149,7 +149,7 @@ Edge_avoiding_AMR/
 
 original repository:https://github.com/Curious-Utkarsh/bot_ws
 
-🔄 Modified and maintained by Suman Das Adhikary -  Inspired by a workshop mentor https://github.com/Curious-Utkarsh
+🔄 Modified and maintained by Suman Das Adhikary -  Inspired by a workshop mentor @Curious-Utkarsh
 
 🧪 Designed for ROS 2 Jazzy and Gazebo Harmonic (2025+ compatibility)
 
