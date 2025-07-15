@@ -1,49 +1,35 @@
-# 🤖 bot_ws – Simulated Edge-Avoidance Robot
+# 🤖 Edge_avoiding_AMR – Autonomous Mobile Robot Simulation (ROS 2 Jazzy + Gazebo Harmonic)
 
-This repository contains a ROS 2-based mobile robot simulation with an edge-avoidance behavior. The robot uses a simulated LIDAR sensor in Gazebo and responds to edges or drops detected in its environment.
+This repository contains a ROS 2-based mobile robot simulation with **edge-avoidance behavior**, running in **Gazebo Harmonic**. The robot uses a simulated **LIDAR sensor** to detect drop-offs and navigate safely, demonstrating basic reactive control for indoor AMRs (Autonomous Mobile Robots).
+
+> 🛠️ Originally developed by [Curious-Utkarsh](https://github.com/Curious-Utkarsh) as [`bot_ws`](https://github.com/Curious-Utkarsh/bot_ws), and now updated and maintained by [Suman Das Adhikary](https://github.com/DasAdhikary122) for ROS 2 Jazzy compatibility and future improvements.
 
 ---
 
-## 📦 Prerequisites
+## 📦 System Requirements
 
-* ✅ OS: Ubuntu 22.04
-* ✅ ROS 2: Humble Hawksbill
-* ✅ Gazebo and RViz (included in ROS 2 Desktop Full)
-* ✅ Python 3.10+
+- ✅ **OS:** Ubuntu 24.04 LTS
+- ✅ **ROS 2:** Jazzy Jalisco
+- ✅ **Simulator:** Gazebo Harmonic
+- ✅ **Python:** 3.12+
 
 ---
 
 ## 🧰 Step-by-Step Installation
 
-### 1️⃣ Install ROS 2 Humble
+### 1️⃣ Install ROS 2 Jazzy
 
-Follow the official ROS 2 installation instructions:
+Follow the official guide:  
+🔗 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
-```bash
-https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
-```
-
-### 2️⃣ Source ROS 2 and Add to `.bashrc`
+### 2️⃣ Setup Environment
 
 ```bash
-source /opt/ros/humble/setup.bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-```
-
-### 3️⃣ Set RMW Implementation (CycloneDDS)
-
-```bash
+source /opt/ros/jazzy/setup.bash
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
-```
-
-### 4️⃣ Source `.bashrc`
-
-```bash
 source ~/.bashrc
-```
-
----
 
 ## 🧠 Workspace Setup
 
@@ -57,8 +43,9 @@ sudo apt install git
 
 ```bash
 cd ~
-git clone https://github.com/Curious-Utkarsh/bot_ws.git
-cd ~/bot_ws
+git clone https://github.com/DasAdhikary122/Edge_avoiding_AMR.git
+cd Edge_avoiding_AMR
+
 ```
 
 ---
@@ -68,9 +55,11 @@ cd ~/bot_ws
 ### 7️⃣ Install `rosdep` and initialize
 
 ```bash
+sudo apt update
 sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
+
 ```
 
 ### 8️⃣ Install Package Dependencies
@@ -84,7 +73,7 @@ rosdep install --from-paths src -y --ignore-src --skip-keys="ament_python"
 ## 🧱 Build the Workspace
 
 ```bash
-cd ~/bot_ws
+cd ~/Edge_avoiding_AMR
 colcon build
 ```
 
@@ -92,7 +81,8 @@ colcon build
 
 ```bash
 source install/setup.bash
-echo "source ~/bot_ws/install/setup.bash" >> ~/.bashrc
+echo "source ~/Edge_avoiding_AMR/install/setup.bash" >> ~/.bashrc
+
 ```
 
 ---
@@ -132,12 +122,13 @@ You should now see:
 ## 📁 Project Structure Overview
 
 ```
-bot_ws/
+Edge_avoiding_AMR/
 ├── src/
-│   ├── bot_description/     # URDF and Gazebo assets
-│   ├── bot_controller/      # Robot control nodes
+│   ├── bot_description/     # URDF, meshes, Gazebo models
+│   ├── bot_controller/      # ROS 2 controllers and parameters
 │   ├── bot_bringup/         # Launch files
-│   ├── bot_script/          # Edge detection and logic
+│   ├── bot_script/          # Edge detection node
+
 ```
 
 ---
@@ -148,16 +139,21 @@ bot_ws/
 * Always source the workspace in every terminal:
 
   ```bash
-  source ~/bot_ws/install/setup.bash
+  source ~/Edge_avoiding_AMR/install/setup.bash
   ```
 
 ---
 
 ## 🙌 Credits
+💡 Original project by Curious-Utkarsh
 
-This project is maintained by [Curious-Utkarsh](https://github.com/Curious-Utkarsh).
-Inspired by real-world edge-avoidance scenarios in robotics.
+🔄 Modified and maintained by Suman Das Adhikary
+
+🧪 Designed for ROS 2 Jazzy and Gazebo Harmonic (2025+ compatibility)
+
+
 
 ---
 
 Let me know if you want to add SLAM or wall-following next!
+
