@@ -142,21 +142,20 @@ Edge_avoiding_AMR/
   source ~/Edge_avoiding_AMR/install/setup.bash
   ```
 
+------
+
+## 📜 License
+This project is licensed under the terms of the [LICENSE](LICENSE) file.
+
 ---
 
-
-License
-This project is licensed under the: https://github.com/DasAdhikary122/Edge_avoiding_AMR/commit/b6773165302899ac43945684a98be4edae6eb431
 ## 🙌 Credits
-💡 Original project by https://github.com/Curious-Utkarsh
+💡 Original project by [Curious-Utkarsh](https://github.com/Curious-Utkarsh)  
+🔗 Original repository: [bot_ws](https://github.com/Curious-Utkarsh/bot_ws)  
 
-original repository:https://github.com/Curious-Utkarsh/bot_ws
+🔄 Modified and maintained by **Suman Das Adhikary** – Inspired by workshop mentor @Curious-Utkarsh  
 
-🔄 Modified and maintained by Suman Das Adhikary -  Inspired by a workshop mentor @Curious-Utkarsh
-
-🧪 Designed for ROS 2 Jazzy and Gazebo Harmonic (2025+ compatibility)
-
-
+🧪 Designed for **ROS 2 Jazzy** and **Gazebo Harmonic** (2025+ compatibility)  
 
 ---
 
