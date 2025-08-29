@@ -145,7 +145,7 @@ Edge_avoiding_AMR/
 ------
 
 ## 📜 License
-This project is licensed under the terms of the [MIT LICENSE](MITLICENSE) file.
+This project is licensed under the terms of the [MITLICENSE](MITLICENSE) file.
 
 ---
 
